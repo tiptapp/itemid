@@ -9,7 +9,7 @@ The solution allows for up to 256 machines to simultaneously create 4096 unique 
 
 Installation
 ------------
-`npm install --save itemid`
+`npm install --save @tiptapp/itemid`
 
 **NOTE:** If this module is used together with MongoDB then it is important that `ItemId` requires the same `bson` module as `mongodb-core` does. It may help to reduce module duplication in the project’s module tree by running the following command in the project’s root directory.
 
@@ -22,6 +22,23 @@ Consider adding the `dedup` command to the project’s `postinstall` script hook
   "postinstall": "npm dedup bson"
 }
 ```
+
+Publishing to github
+----------
+- Download the repo
+- Run `npm install`
+- Run `npm test`
+- Update the version in `package.json`
+- Commit and push your change(s)
+- As per the steps in here: https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry
+	- Create a personal access token with `read:packages` and `write:packages` permissions
+	- Run `npm login --scope=@NAMESPACE --auth-type=legacy --registry=https://npm.pkg.github.com` and enter your GitHub username and the personal access token when prompted
+	- OR update your `~/.npmrc` file with the following:
+		```
+		//npm.pkg.github.com/:_authToken=YOUR_TOKEN
+		@tiptapp:registry=https://npm.pkg.github.com
+		```
+- Run `npm publish`
 
 Inspiration
 -----------
@@ -47,7 +64,7 @@ The last 8 bits denote the machine ID, allowing for up to 256 machines to cooper
 Quick Guide
 -----------
 ```javascript
-const ItemId = require('itemid');
+const ItemId = require('@tiptapp/itemid');
 
 // Create a new ID object (e.g. to use in a MongoDB query):
 const id = new ItemId();

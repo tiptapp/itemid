@@ -1,5 +1,5 @@
 {
-  "name": "itemid",
+  "name": "@tiptapp/itemid",
   "version": "2.0.0",
   "description": "Distributed site-unique 64-bit user IDs",
   "main": "itemid.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/fredricrylander/itemid.git"
+    "url": "git://github.com/tiptapp/itemid.git"
   },
   "author": "Fredric Rylander <fredric.rylander@gmail.com> (https://github.com/fredricrylander)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fredricrylander/itemid/issues"
+    "url": "https://github.com/tiptapp/itemidissues"
   },
-  "homepage": "https://github.com/fredricrylander/itemid",
+  "homepage": "https://github.com/tiptapp/itemid",
   "devDependencies": {
     "chai": "^3.2.0",
     "mocha": "^2.3.2"
