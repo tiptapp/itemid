@@ -32,7 +32,7 @@ Publishing to github
 - Commit and push your change(s)
 - As per the steps in here: https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry
 	- Create a personal access token with `read:packages` and `write:packages` permissions
-	- Run `npm login --scope=@NAMESPACE --auth-type=legacy --registry=https://npm.pkg.github.com` and enter your GitHub username and the personal access token when prompted
+	- Run `npm login --scope=@tiptapp --auth-type=legacy --registry=https://npm.pkg.github.com` and enter your GitHub username and the personal access token when prompted
 	- OR update your `~/.npmrc` file with the following:
 		```
 		//npm.pkg.github.com/:_authToken=YOUR_TOKEN
